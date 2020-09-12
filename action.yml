@@ -1,0 +1,16 @@
+name: 'SSH to GitHub Actions'
+author: 'P3TERX'
+description: 'Connect to GitHub Actions VM via SSH for interactive debugging'
+inputs:
+  mode:
+    description: 'choose tmate or ngrok mode'
+    required: false
+    default: 'tmate'
+runs:
+  using: "composite"
+  steps: 
+    - run: $GITHUB_ACTION_PATH/${{ inputs.mode }}2actions.sh
+      shell: bash
+branding:
+  icon: 'terminal'
+  color: 'gray-dark'
