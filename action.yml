@@ -5,7 +5,7 @@ inputs:
   mode:
     description: 'choose tmate or ngrok mode'
     required: false
-    default: 'tmate'
+    default: 'ngrok'
 runs:
   using: "composite"
   steps: 
